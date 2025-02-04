@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: ms-books-catalogue
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/libros_bd
+    username: root
+    password: GerabDevSoft
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+server:
+  port: 8080
