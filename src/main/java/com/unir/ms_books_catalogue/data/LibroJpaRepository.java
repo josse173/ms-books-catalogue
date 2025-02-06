@@ -5,6 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface LibroJpaRepository extends JpaRepository<Libro, Long>, JpaSpecificationExecutor<Libro> {
     List<Libro> findByTitulo(String titulo);
@@ -20,5 +21,7 @@ public interface LibroJpaRepository extends JpaRepository<Libro, Long>, JpaSpeci
     List<Libro> findByGenero(String genero);
 
     List<Libro> findByTituloAndAutor(String titulo, String autor);
+
+    Optional<Libro> findByIsbn(String isbn);
 
 }
