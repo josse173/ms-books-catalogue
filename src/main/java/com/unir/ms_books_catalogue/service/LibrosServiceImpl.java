@@ -57,7 +57,7 @@ public class LibrosServiceImpl implements LibrosService {
                 && libroCrear.getPrecio() != null
                 && libroCrear.getStock() != null
                 && libroCrear.getVisible() != null) {
-            Libro libro = Libro.builder().titulo(libroCrear.getTitulo()).autor(libroCrear.getAutor()).editorial(libroCrear.getEditorial()).anio(libroCrear.getAnio()).isbn(libroCrear.getIsbn()).resumen(libroCrear.getResumen()).genero(libroCrear.getGenero()).precio(libroCrear.getPrecio()).imagen(libroCrear.getImagen()).build();
+            Libro libro = Libro.builder().titulo(libroCrear.getTitulo()).autor(libroCrear.getAutor()).editorial(libroCrear.getEditorial()).anio(libroCrear.getAnio()).isbn(libroCrear.getIsbn()).resumen(libroCrear.getResumen()).genero(libroCrear.getGenero()).precio(libroCrear.getPrecio()).imagen(libroCrear.getImagen()).stock(libroCrear.getStock()).visible(libroCrear.getVisible()).build();
             return repository.save(libro);
         }else{
             return null;
